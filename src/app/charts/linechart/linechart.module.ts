@@ -3,6 +3,7 @@ import { RouterModule } from '@angular/router';
 
 import { LinechartComponent } from './linechart.component';
 import { SimpleLineComponent } from './simple-line/simple-line.component';
+import { LinesComponent } from './lines/lines.component';
 
 export const Routes = [
     { path: 'charts/line-chart', component: LinechartComponent}
@@ -11,7 +12,8 @@ export const Routes = [
 @NgModule({
     declarations: [
         LinechartComponent,
-        SimpleLineComponent
+        SimpleLineComponent,
+        LinesComponent
     ],
     imports: [
         RouterModule.forChild(Routes)
