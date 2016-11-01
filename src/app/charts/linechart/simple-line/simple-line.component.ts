@@ -44,7 +44,7 @@ export class SimpleLineComponent implements OnInit {
     }
 
     let w = container.clientWidth;
-    let h = 560;
+    let h = 360;
     let margin = { left: 40, top: 40, right: 40, bottom: 30 };
 
     let dimensions: IDimensions = {
