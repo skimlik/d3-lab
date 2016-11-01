@@ -5,15 +5,17 @@ import { HttpModule } from '@angular/http';
 import { Routing } from './routing.module';
 
 import { AppComponent } from './app.component';
-import { LinechartComponent } from './linechart/linechart.component';
 import { HomeComponent } from './home/home.component';
+
+import { LineChartModule } from './charts/linechart';
+
 @NgModule({
   declarations: [
     AppComponent,
-    LinechartComponent,
     HomeComponent
   ],
   imports: [
+    LineChartModule,
     BrowserModule,
     FormsModule,
     HttpModule,
