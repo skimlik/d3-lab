@@ -1,0 +1,40 @@
+* /deep/ {
+
+    .simple-line-component {
+        width: 100%;
+    }
+    .chartArea {
+        fill: none;
+        stroke: steelblue;
+        stroke-width: 2.5px;
+    }
+    .axis--x {
+        path {
+            stroke-width: 1px;
+        }
+    }
+
+    .tick {
+        line {
+            stroke: #9b9999;
+            stroke-width: 0.5px;
+        }
+    }
+
+    .zoom {
+        fill: none;
+        pointer-events: all;
+    }
+
+    .marker {
+        stroke: steelblue;
+        stroke-width: 1.5px;
+        fill: #351337;
+        opacity: 20;
+    }
+
+    .marker-line {
+        stroke: steelblue;
+        stroke-width: 1.5px;
+    }
+}
