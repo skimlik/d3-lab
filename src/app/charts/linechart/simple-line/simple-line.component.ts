@@ -21,6 +21,8 @@ interface IDataObject {
   styleUrls: ['./simple-line.component.scss']
 })
 export class SimpleLineComponent implements OnInit {
+  private currentPrice: number;
+  private xy: {x: number, y: number} = {x: 0, y: 0};
 
   private nativeElement: any;
   private svg: any;
@@ -154,6 +156,8 @@ export class SimpleLineComponent implements OnInit {
 
       let xp = self.x(d.price) + dimensions.margin.left;
       let yp = self.y(d.revenue) + dimensions.margin.top;
+      self.currentPrice = d.price;
+      self.xy = {x: xp + 20, y: yp - 30};
 
       marker.attr('transform', `translate(${xp}, ${yp})`);
       lineMarker.attr('y1', yp).attr('x1', xp).attr('x2', xp);
@@ -168,7 +172,7 @@ export class SimpleLineComponent implements OnInit {
       .style('opacity', 0)
       .classed('marker-line', true);
 
-    this.svg.append('circle').attr('cx', 0).attr('cy', 0).attr('r', 5)
+    this.svg.append('circle').attr('cx', 0).attr('cy', 0).attr('r', 3)
       .style('opacity', 0)
       .classed('marker', true);
   }
@@ -176,5 +180,6 @@ export class SimpleLineComponent implements OnInit {
   private setMarkerOpacity(opacity: number): void {
     this.svg.select('.marker-line').transition().duration(500).style('opacity', opacity);
     this.svg.select('.marker').transition().duration(500).style('opacity', opacity);
+    this.svg.select('#simpleTooltip').transition().duration(200).style('opacity', opacity);
   }
 }

@@ -1,8 +1,4 @@
 <div class="line-component">
-    <div class="svg-tooltip" id="tooltip1">
-        <span class="text text-primary">{{revenue1}}</span>
-    </div>
-    <div class="svg-tooltip" id="tooltip2">
-        <span class="text text-primary">{{revenue2}}</span>
-    </div>
+    <app-svg-tooltip id="tooltip1" [innerText]="revenue1" [stroke]="'steelblue'" [move]="xy1"></app-svg-tooltip>
+    <app-svg-tooltip id="tooltip2" [innerText]="revenue2" [stroke]="'maroon'" [move]="xy2"></app-svg-tooltip>
 </div>
